@@ -83,9 +83,9 @@ async function fetchItems() {
             const dateObj = new Date(item.item_date);
             const formattedDate = dateObj.toLocaleDateString();
 
-            card.innerHTML = `
-    <h3>${item.title} <span style="font-size: 0.8em; color: gray;">(${item.category})</span></h3>
-    <img src="https://via.placeholder.com/150" alt="${item.title}" loading="lazy" style="width:100%; border-radius:4px; margin-bottom:10px;">
+                card.innerHTML = `
+            <h3>${item.title} <span style="font-size: 0.8em; color: gray;">(${item.category})</span></h3>
+            <img src="https://via.placeholder.com/150" alt="${item.title}" loading="lazy" width="150" height="150" style="width:100%; height:auto; border-radius:4px; margin-bottom:10px; object-fit:cover;">
     <p><strong>Location:</strong> ${item.location}</p>
     <p><strong>Date:</strong> ${formattedDate}</p>
     <p><strong>Description:</strong> ${item.description}</p>

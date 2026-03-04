@@ -1,0 +1,140 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    background: #003366; /* Quest International University colors */
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav button {
+    background: #ffcc00;
+    color: #003366;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 0.5rem;
+    transition: background 0.3s ease;
+}
+
+nav button:hover {
+    background: #e6b800;
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    flex: 1;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #003366;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+button[type="submit"] {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Responsive Grid for Displaying Items */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Item Card (for later when we fetch data) */
+.item-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid #003366;
+}
+
+.item-card.lost {
+    border-left-color: #dc3545; /* Red for lost */
+}
+
+.item-card.found {
+    border-left-color: #28a745; /* Green for found */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #ddd;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
